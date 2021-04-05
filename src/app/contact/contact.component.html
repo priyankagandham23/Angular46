@@ -1,1 +1,21 @@
-<p>contact works!</p>
+<ul class="nav nav-pills">
+    <li class="nav-item " [class.active]="view=='a1'">
+        <a class="nav-link" (click)="view='a1'">Home</a>
+    </li>
+    <li class="nav-item"  [class.active]="view=='a2'">
+        <a class="nav-link" (click)="view='a2'">About</a>
+    </li>
+    <li class="nav-item"  [class.active]="view=='a3'">
+        <a class="nav-link" (click)="view='a3'">contact</a>
+    </li>
+</ul>
+<div [ngSwitch]="view">
+<div *ngSwitchCase="'a1'">Home Page exists</div>
+<div *ngSwitchCase="'a2'">About Page exists</div>
+<div *ngSwitchCase="'a3'">Contact Page exists</div>
+
+
+
+
+
+</div>
